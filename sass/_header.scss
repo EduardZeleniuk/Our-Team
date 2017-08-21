@@ -1,0 +1,44 @@
+.header {
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	margin-bottom: 80px;
+  &__suptitle, &__title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+	&__suptitle {
+		font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+		color: rgba(0, 0, 0, .5);
+	}
+	&__title {
+		font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+		color: #FFCC00;
+		font-weight: bold;
+	}
+	&::after, &::before {
+      content: url(../img/bonfire-icon.png);
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      background-color: #fff;
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 0;
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0); 
+    }
+    &::before {
+      content: '';
+      width: 460px;
+      display: block;
+      border-bottom: 1px solid #ffcc00;
+      bottom: -30px; 
+    }
+}

@@ -1,0 +1,220 @@
+$color: #FFCC00;
+$text-color: rgba(0,0,0,.5);
+.slider {
+	text-align: center;
+	color: $text-color;
+	position: relative;
+	&__arrow {
+		width: 15px;
+		height: 22px;
+		position: absolute;
+		top: 280px;
+		right: 27px;
+		&_left  {
+		content: url('../img/angle-left.png');
+		left: 27px;
+		}
+		&_right{
+			content: url('../img/angle-right.png');
+			right: 27px;
+		}
+		&:hover {
+				background: transparent;
+				-webkit-transform: scale(1.2);
+				   -moz-transform: scale(1.2);
+				    -ms-transform: scale(1.2);
+				     -o-transform: scale(1.2);
+				        transform: scale(1.2);
+		}
+		}
+	&__content {
+		display: flex;
+		margin: 0 auto;
+		width: 1005px;
+		padding-top: 75px;
+		padding-bottom: 65px;
+		position: relative;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			border-left: 1px solid $color;
+			top: 0;
+   		left: 50%; 
+			height: 560px;
+			}
+	}
+	&__foto {
+		display: flex;
+		width: 50%;
+		position: relative;
+		&-list {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 420px;
+			height: 420px;
+		}
+		&-row {
+			display: flex;
+			justify-content: space-between;
+			&:nth-of-type(1) .slider__foto-item {
+				border-top: 1px solid $color;
+			}
+			&:nth-of-type(2) .slider__foto-item {
+				border-bottom: 1px solid $color;
+			}
+		}
+		&-item {
+			width: 100px;
+			height: 100px;
+			&:nth-of-type(1) {
+				border-left: 1px solid $color;
+			}
+			&:nth-of-type(2) {
+				border-right: 1px solid $color;
+			}
+		}
+		&-img-wrapper {
+			width: 390px;
+			height: 390px;
+			overflow: hidden;
+			border: 1px solid $color;
+			position: absolute;
+			top: 15px;
+			left: 15px;
+		
+		}
+		&-img {
+			height: 100%;
+			position: absolute;
+			left: 50%; 
+			top: 50%;
+			-webkit-transform: translate(-50%,-50%);
+		   	-moz-transform: translate(-50%,-50%);
+		   	 -ms-transform: translate(-50%,-50%);
+		    	 -o-transform: translate(-50%,-50%);
+		     	  	transform: translate(-50%,-50%);
+		}
+	}
+	&__desc {
+		width: 50%;
+		display: flex;
+		justify-content: flex-end;
+		&-wrapper {
+		width: 420px;
+		display: inline-block;
+		}
+		&-title, &-title-name, &-btn  {
+			white-space: nowrap;
+   		text-overflow: ellipsis;
+   		overflow: hidden;
+		}
+		&-title {
+			font-family: 'Raleway', sans-serif;
+			margin-bottom: 30px;
+			&-name {
+				font-family: 'Roboto', sans-serif;
+				&::after {
+					content: "";
+			  	display: block;
+			  	margin: 25px auto;
+			  	width: 100px;
+			  	border-top: 1px solid $color;
+				}
+			}
+		}
+		&-list {
+			list-style: none;
+			padding: 0;
+			font-size: 0;
+		}
+		&-item {
+			display: inline-block;
+			&:not(:last-of-type) {
+				margin-right: 5px;
+			}
+		}
+		&-link {
+			display: block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			&:hover {
+				box-shadow: 0 0 20px $color;
+			}
+		}
+		&-img {
+			width: 100%;
+		}
+		&-text {
+			font-size: 14px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			line-height: 20px;
+			margin: 30px auto 50px auto;
+			max-height: 105px;
+			overflow: hidden;
+			max-height: 100px;
+   		overflow: hidden;
+		}
+		&-btn {
+			display: inline-block;
+			max-width: 165px;
+			text-transform: uppercase;
+			border: 1px solid $color;
+			padding: 5px 10px;
+			color: $text-color;
+			font-size: 14px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 900;	
+			text-decoration: none;
+			position: relative;
+			&:hover {
+				background: $color;
+				color: #fff;
+			}
+			&::before {
+				content: "";
+				background: url('../img/boxes.png') no-repeat;
+			  display: block;
+			  position: absolute;
+			  top: -30px;
+			  left: 30px; 
+			  width: 50px;
+			  height: 4px;
+			} 
+		}
+	}
+	&__nav {
+		list-style: none;
+		padding: 0;
+		font-size: 0;
+		margin-top: 40px;
+		&-item {
+			display: inline-block;
+			border: 1px solid $color;
+			border-radius: 50%;
+			overflow: hidden;
+			width: 10px;
+			height: 10px;
+			background: $color;
+			&:not(:last-of-type) {
+				margin-right: 9px;
+			}
+			&:hover, &_active {
+				background: transparent;
+				-webkit-transform: scale(1.2);
+				   -moz-transform: scale(1.2);
+				    -ms-transform: scale(1.2);
+				     -o-transform: scale(1.2);
+				        transform: scale(1.2);
+			}
+		}
+		&-link {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
